@@ -2,7 +2,7 @@ import React from 'react';
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import renderWithRouter from '../helpers/renderWithRouter';
-import { Pokedex } from '../pages';
+// import { Pokedex } from '../pages';
 import App from '../App';
 
 describe('teste do componente Pokedex', () => {
@@ -15,14 +15,6 @@ describe('teste do componente Pokedex', () => {
 
   test('testa os botões de filtro da Pokedex existem', () => {
     renderWithRouter(<App />);
-    // screen.getByRole('button', { name: /electric/i });
-    // screen.getByRole('button', { name: /fire/i });
-    // screen.getByRole('button', { name: /bug/i });
-    // screen.getByRole('button', { name: /poison/i });
-    // screen.getByRole('button', { name: /psychic/i });
-    // screen.getByRole('button', { name: /normal/i });
-    // screen.getByRole('button', { name: /dragon/i });
-    // screen.getByRole('button', { name: /all/i });
     screen.getAllByTestId('pokemon-type-button');
   });
 
